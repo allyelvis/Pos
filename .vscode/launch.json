@@ -1,0 +1,93 @@
+{
+  "configurations": [
+    {
+      "type": "cobol",
+      "request": "attach",
+      "name": "COBOL (native): Attach to process",
+      "processId": "${command:pickProcess}"
+    },v
+    {
+      "type": "cobol",
+      "request": "attach",
+      "name": "COBOL (native): Attach to process",
+      "processId": "${command:pickProcess}"
+    },
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "Invoke Lambda",
+      "invokeTarget": {
+        "target": "template",
+        "templatePath": "Template Location",
+        "logicalId": "Function Logical ID"
+      },
+      "lambda": {
+        "payload": {
+          "json": {}
+        }
+      }
+    },
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "Invoke Lambda with API Gateway",
+      "invokeTarget": {
+        "target": "api",
+        "templatePath": "Template Location",
+        "logicalId": "Function Logical ID"
+      },
+      "api": {
+        "path": "Path",
+        "httpMethod": "Method",
+        "payload": {
+          "json": {}
+        }
+      }
+    },
+
+  
+
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "Invoke Lambda with API Gateway",
+      "invokeTarget": {
+        "target": "api",
+        "templatePath": "Template Location",
+        "logicalId": "Function Logical ID"
+      },
+      "api": {
+        "path": "Path",
+        "httpMethod": "Method",
+        "payload": {
+          "json": {}
+        }
+      }
+    },
+    {
+      "type": "node-terminal",
+      "name": "JavaScript Debug Terminal",
+      "request": "launch",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/ZEBRA/OneDrive/Documents/GitHub/Poskgh",
+      "program": "c:/Users/ZEBRA/OneDrive/Documents/GitHub/Poskgh/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
